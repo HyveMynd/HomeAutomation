@@ -3,22 +3,24 @@
 .container
     .row
         .col-md-6
-            h4 Change lock status
-            p Toggle the locks on both the front and back doors
+            h4 Change Front door lock status
+            p Toggle the locks on and off
             .btn-group.btn-toggle
                 button.btn.btn-lg.btn-default(onclick="toggleFrontLocks()") ON
                 button.btn.btn-lg.btn-info.active(onclick="toggleFrontLocks()") OFF
         .col-md-6
-            img.img-responsive#frontLocks
+            .col-sm-6
+                img.img-responsive#frontLocks
     .row
         .col-md-6
-            h4 Change lock status
-            p Toggle the locks on both the front and back doors
+            h4 Change back door lock status
+            p Toggle the locks on and off
             .btn-group.btn-toggle1
                 button.btn.btn-lg.btn-default(onclick="toggleBackLocks()") ON
                 button.btn.btn-lg.btn-info.active(onclick="toggleBackLocks()") OFF
         .col-md-6
-            img.img-responsive#backLocks
+            .col-sm-6
+                img.img-responsive#backLocks
 
 script(type="text/javascript", src="js/locks.js")
 script(type="text/javascript", src="js/btn-toggle.js")

@@ -41,12 +41,12 @@ var Server = {
     },
 
     changeFrontDoor: function(callback){
-        this.house.frontDoor = this.house.frontDoor;
+        this.house.frontDoor = !this.house.frontDoor;
         callback(this.house.frontDoor);
     },
 
     changeBackDoor: function(callback){
-        this.house.backDoor = this.house.backDoor;
+        this.house.backDoor = !this.house.backDoor;
         callback(this.house.backDoor);
     },
 

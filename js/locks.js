@@ -3,35 +3,45 @@
  */
 
 $('#frontLocks').ready(function(){
-    if (Server.isLightsOn()){
-        lightOn()
+    if (Server.isFrontDoorLocked()){
+        lockOn('#frontLocks')
     } else {
-        lightOff()
+        lockOff('#frontLocks')
     }
 });
 
 $('#backLocks').ready(function(){
-    if (Server.isLightsOn()){
-        lightOn()
+    if (Server.isBackDoorLocked()){
+        lockOn('#backLocks')
     } else {
-        lightOff()
+        lockOff('#backLocks')
     }
 });
 
-function toggleLights(){
-    Server.changeLights(function(isLightOn){
-        if (isLightOn){
-            lightOn()
+function toggleFrontLocks(){
+    Server.changeFrontDoor(function(isLocked){
+        if (isLocked){
+            lockOn('#frontLocks')
         } else {
-            lightOff()
+            lockOff('#frontLocks')
+        }
+    })
+}
+
+function toggleBackLocks(){
+    Server.changeBackDoor(function(isLocked){
+        if (isLocked){
+            lockOn('#backLocks')
+        } else {
+            lockOff('#backLocks')
         }
     })
 }
 
 function lockOn(id){
-    $(id).attr('src', 'img/bulb_on.jpg');
+    $(id).attr('src', 'img/lock_on.jpg');
 }
 
 function lockOff(id){
-    $(id).attr('src', 'img/bulb_off.jpg');
+    $(id).attr('src', 'img/lock_off.jpg');
 }
