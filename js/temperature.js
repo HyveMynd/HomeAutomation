@@ -1,18 +1,22 @@
 $('#temperature').ready(function(){
-   var temp = Server.getTemperature();
-   $('#temperature').css('width', temp + '%');
+    var temp = Server.getTemperature();
+    setTemp(temp);
 });
 
 function temperatureUp(){
     var temp = Server.getTemperature();
     Server.setTemperature(++temp, function (currentTemp){
-        $('#temperature').css('width', currentTemp + '%');
+        setTemp(currentTemp);
     });
 }
 
 function temperatureDown(){
     var temp = Server.getTemperature();
     Server.setTemperature(--temp, function (currentTemp){
-        $('#temperature').css('width', currentTemp + '%');
+        setTemp(currentTemp);
     });
+}
+
+function setTemp(temp){
+    $('#temperature').css('width', temp + '%').text(temp);
 }
