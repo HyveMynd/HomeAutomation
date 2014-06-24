@@ -1,0 +1,13 @@
+.container
+    .row
+        .col-md-6
+            h4 Change lighting status
+            p Toggle the lights on and off
+            .btn-group.btn-toggle
+                button.btn.btn-lg.btn-default(onclick="toggleLights()") ON
+                button.btn.btn-lg.btn-info.active(onclick="toggleLights()") OFF
+        .col-md-6
+            img.img-responsive#lights
+
+script(type="text/javascript", src="js/lights.js")
+script(type="text/javascript", src="js/btn-toggle.js")

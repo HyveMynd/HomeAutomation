@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title Home Automation
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        link(rel="stylesheet", href="css/bootstrap-theme.min.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='author', content='Hyvemynd Corporation')
+        meta(charset='utf-8')
+    body
+        nav.navbar.navbar-default
+            ul.nav.nav-tabs
+                li.active
+                    a(href="#home", data-toggle="tab", onclick="loadHome()") Home
+                li
+                    a(href="#lights", data-toggle="tab", onclick="loadLights()") Lights
+                li
+                    a(href="#garage", data-toggle="tab", onclick="loadGarage()") Garage Door
+                li
+                    a(href="#temperature", data-toggle="tab", onclick="loadTemp()") Temperature
+                li
+                    a(href="#locks", data-toggle="tab", onclick="loadLocks()") Locks
+        .container
+            .jumbotron
+                h3 Home Automation
+                    p Control your home from anywhere with the ultra safe and reliable home autmation system from TowerDefense!
+            div#main
+        script(type="text/javascript", src="js/bootstrap.min.js")
+        script(type="text/javascript", src="js/main.js")
+        script(type="text/javascript", src="js/Server.js")
+

@@ -1,0 +1,17 @@
+.container
+    .row
+        .col-md-8
+            h4 Current Temperature
+                .progress
+                    .progress-bar.progress-bar-success(role="progressbar",
+                    aria-valuenow="60", aria-valuemin="0", aria-valuemax="100", style="width: 60%") 60%
+        .col-md-4
+            h4 Change Temperature
+            button.btn-danger.btn-lg
+                span.glyphicon.glyphicon-circle-arrow-up
+            button.btn-default.btn-lg
+                | 60
+            button.btn-info.btn-lg
+                span.glyphicon.glyphicon-circle-arrow-down
+
+script(type="text/javascript", src="js/temperature.js")

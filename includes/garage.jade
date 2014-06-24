@@ -1,0 +1,13 @@
+.container
+    .row
+        .col-md-6
+            h4 Change Garage status
+            p Open and close the garage
+            .btn-group.btn-toggle
+                button.btn.btn-lg.btn-default(onclick="toggleGarage()") OPEN
+                button.btn.btn-lg.btn-info.active(onclick="toggleGarage()") CLOSED
+        .col-md-6
+            img.img-responsive#garage
+
+script(type="text/javascript", src="js/garage.js")
+script(type="text/javascript", src="js/btn-toggle.js")
