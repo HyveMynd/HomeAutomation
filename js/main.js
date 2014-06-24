@@ -1,3 +1,7 @@
+/**
+ * Loads different modules into the main content area according to the active module.
+ */
+
 function loadTemp(){
     $("#main").load('includes/temperature.html');
 }

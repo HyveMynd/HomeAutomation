@@ -1,3 +1,7 @@
+/**
+ * Controls for the temperature module
+ */
+
 $('#temperature').ready(function(){
     var temp = Server.getTemperature();
     setTemp(temp);

@@ -1,5 +1,5 @@
 /**
- * Created by andresmonroy on 6/24/14.
+ * The mock server component used to fake the server interaction.
  */
 var Server = {
     house: {

@@ -1,6 +1,7 @@
 /**
- * Created by andresmonroy on 6/23/14.
+ * Controls for the garage module
  */
+
 
 $('#garage').ready(function(){
    if(Server.isGarageOpen()){

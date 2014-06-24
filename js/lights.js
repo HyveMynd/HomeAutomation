@@ -1,5 +1,5 @@
 /**
- * Created by andresmonroy on 6/23/14.
+ * Controls for the lighting module
  */
 
 $('#lights').ready(function(){
